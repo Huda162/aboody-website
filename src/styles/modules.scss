@@ -1,0 +1,325 @@
+@import "shared/variables";
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Kufam:ital,wght@0,400..900;1,400..900&family=Leckerli+One&family=Marhey:wght@300..700&display=swap');
+
+@font-face {
+    font-family: 'vexa';
+    src: url('../../public/assets/fonts/VEXA-.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hamdi';
+    src: url('../../public/assets/fonts/Hamdy-V2-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.intro-background {
+    background: url('/assets/images/intro-bg.png') no-repeat center center;
+    background-size: cover;
+}
+
+.product-bg {
+    background-image: url('/assets/images/products-bg.png');
+    background-repeat: repeat-y;         /* repeat vertically */
+    background-position: top center;     /* start from the top */
+    background-size: 100% auto;          /* fill width, auto height for natural vertical repeat */
+  }
+  
+
+.products-background {
+    background: url('/assets/images/products_header.png') repeat center center;
+    background-size: cover;
+}
+
+.intro-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+    opacity: 0;
+    animation: fadeGradient 1s ease-in-out 0.5s forwards;
+    z-index: 0;
+}
+
+.intro-title {
+    font-weight: 500;
+    color: $lightGray;
+    font-family: 'vexa';
+}
+.products-title {
+    font-weight: 700;
+    color: $gray;
+}
+.products-sub-title {
+    font-weight: 700;
+    font-family: "hamdi", sans-serif;
+    color: $primaryColor;
+}
+
+.intro-title-en {
+    font-weight: 400;
+    font-family: "Leckerli One", cursive;
+    color: $primaryColor;
+}
+
+.animate-intro-image {
+    object-fit: cover;
+    object-position: top;
+    top: 65%;
+    transition: all 1s;
+    opacity: .6;
+}
+
+.animate-move-title-ar {
+    animation: left-move 1s ease-in-out;
+}
+.animate-move-products-intro {
+    animation: left-move 1s ease-out;
+}
+
+.animate-move-title-en {
+    animation: right-move 1s ease-in-out;
+}
+
+.animate-show-cover {
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.about {
+    position: relative;
+    background-color: $darkRed;
+    color: $white;
+}
+
+.product-card1 {
+    background-size: cover;
+    padding: 70px 0;
+    height: 100%;
+}
+.product-card2 {
+    background-size: cover;
+    padding: 70px 0;
+    height: 100%;
+}
+.product-card3 {
+    background-size: cover;
+    padding: 70px 0;
+    height: 100%;
+}
+.product-card4 {
+    background-size: cover;
+    padding: 70px 0;
+    height: 100%;
+}
+
+.product-name {
+    font-weight: 400;
+    color: $white;
+    font-size: 4rem;
+    font-family: 'vexa';
+}
+
+@keyframes fadeGradient {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes left-move {
+    0% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes right-move {
+    0% {
+        transform: translateX(200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.custom-prev-arrow,
+.custom-next-arrow {
+    position: absolute;
+    top: 50% !important;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.3s;
+    color: $white !important;
+}
+
+.custom-prev-arrow {
+    left: 25rem !important;
+    right: auto;
+}
+
+.custom-next-arrow {
+    left: auto;
+    right: 25rem !important;
+}
+
+.custom-prev-arrow::after {
+    font-family: "remixicon";
+    content: "➜" !important;
+    transform: rotate(180deg);
+}
+
+.custom-next-arrow::after {
+    font-family: "remixicon";
+    content: "➜" !important;
+}
+
+.swiper-pagination-bullet {
+    background: orange !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 20px !important;
+    border-radius: 10px !important;
+}
+
+.footer{
+    background-color: $footer;
+}
+
+@keyframes circleReveal {
+    from {
+      clip-path: circle(0% at 50% 50%);
+    }
+    to {
+      clip-path: circle(150% at 50% 50%);
+    }
+  }
+  
+  @keyframes circleConceal {
+    from {
+      clip-path: circle(150% at 50% 50%);
+    }
+    to {
+      clip-path: circle(0% at 50% 50%);
+    }
+  }
+  
+  .animate-reveal {
+    animation: circleReveal 0.6s ease-in-out forwards;
+    clip-path: circle(0% at 50% 50%);
+  }
+  
+  .animate-conceal {
+    animation: circleConceal 0.6s ease-in-out forwards;
+    clip-path: circle(150% at 50% 50%);
+  }
+  
+  .clip-full {
+    clip-path: circle(150% at 50% 50%);
+  }
+  
+  .language-menu ul.sub-menu {
+    position: absolute;
+    text-align: right;
+    top: 70%;
+    background-color: $softWhite;
+    color: $darkGray;
+    visibility: hidden;
+    min-width: 20px;
+    width: max-content;
+    opacity: 0;
+    z-index: -1;
+    border: 0;
+    box-shadow: 0px 4px 15px rgba(1, 15, 28, 0.06);
+    border-radius: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: all 0.4s ease 0s;
+    padding: 2px 16px 6px 15px;
+    /* left: 30px; */
+    list-style-type: none;
+  }
+  
+  
+  .language-menu:hover>ul.sub-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+    z-index: 9;
+  }
+  
+  .language-menu ul.sub-menu li:hover {
+    color: var(--theme-color);
+    text-decoration: none;
+    outline: 0;
+    transition: all ease 0.4s;
+    cursor: pointer;
+  }
+
+  .simple-icon {
+    border: none;
+    background-color: transparent;
+    color: var(--title-color);
+    padding: 0;
+    font-size: 22px;
+    position: relative;
+  }
+  
+  .simple-icon i {
+    font-size: 25px;
+  }
+  
+  .simple-icon .badge {
+    padding: 0.35em 0.57em;
+    font-size: 10px;
+    font-weight: 500;
+    top: -6px;
+    right: 0;
+    left: auto;
+  }
+  
+  .simple-icon:has(.badge) {
+    padding-right: 12px;
+  }
+  
+  .simple-icon:hover {
+    color: var(--theme-color);
+  }
+
+  .simple-icon-mobile i {
+    color: white;
+    font-size: 20px;
+  }
+  

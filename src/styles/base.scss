@@ -1,0 +1,27 @@
+@import "shared/variables";
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Leckerli+One&display=swap');
+
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Almarai", sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+i{
+    color: $primaryColor;
+    font-size: 24px;
+}
