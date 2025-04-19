@@ -1,5 +1,5 @@
 @import "shared/variables";
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Kufam:ital,wght@0,400..900;1,400..900&family=Leckerli+One&family=Marhey:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Kufam:ital,wght@0,400..900;1,400..900&family=Leckerli+One&family=Marhey:wght@300..700&display=swap&family=Chewy&display=swap&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
     font-family: 'vexa';
@@ -55,9 +55,18 @@
     font-weight: 700;
     color: $gray;
 }
+.products-title-en {
+    font-weight: 500;
+    color: $gray;
+}
 .products-sub-title {
     font-weight: 700;
     font-family: "hamdi", sans-serif;
+    color: $primaryColor;
+}
+.products-sub-title-en {
+    font-weight: 500;
+    font-family: "Chewy", system-ui;
     color: $primaryColor;
 }
 
@@ -97,22 +106,6 @@
 }
 
 .product-card1 {
-    background-size: cover;
-    padding: 70px 0;
-    height: 100%;
-}
-.product-card2 {
-    background-size: cover;
-    padding: 70px 0;
-    height: 100%;
-}
-.product-card3 {
-    background-size: cover;
-    padding: 70px 0;
-    height: 100%;
-}
-.product-card4 {
-    background-size: cover;
     padding: 70px 0;
     height: 100%;
 }
@@ -122,6 +115,12 @@
     color: $white;
     font-size: 4rem;
     font-family: 'vexa';
+}
+.product-name-en {
+    font-weight: 400;
+    color: $white;
+    font-size: 4rem;
+    font-family: "Leckerli One", cursive;
 }
 
 @keyframes fadeGradient {

@@ -1,16 +1,19 @@
 'use client';
 
+import { useTranslation } from "react-i18next";
+
 export default function Footer() {
+    const {t, i18n} = useTranslation()
     return (
         <footer className="footer">
-            <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:flex-col md:items-center md:gap-4 md:justify-between lg:flex-row">
-                <span className="t">
+            <div className="w-full mx-auto max-w-screen-xl flex items-center justify-center p-4 md:flex md:flex-col md:items-center md:gap-4 md:justify-between lg:flex-row">
+                <span className="t hidden xl:block">
                     <img src="/assets/images/perfect-logo.png" className="mr-3 h-9 sm:h-9" alt="logo" width="120" height="120" />
                 </span>
-                <div className="text-white capitalize text-lg">
-                    © 2025  All rights reserved.
+                <div className="text-white capitalize text-sm xl:text-lg">
+                    © 2025  {t("all right reserved")}
                 </div>
-                <div className="flex gap-3 items-center justify-center">
+                <div className="flex gap-3 items-center justify-center hidden xl:block">
                     <button
                         type="button"
                         data-twe-ripple-init

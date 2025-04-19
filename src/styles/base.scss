@@ -1,16 +1,29 @@
 @import "shared/variables";
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Leckerli+One&display=swap&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
     font-size: 16px;
     box-sizing: border-box;
 }
 
+html,
 body {
-    margin: 0;
-    font-family: "Almarai", sans-serif;
-    line-height: 1.5;
+  margin: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  line-height: 1.5;
 }
+
+// Arabic default
+.ar-font {
+  font-family: 'Almarai', sans-serif;
+}
+
+// English fallback
+.en-font {
+  font-family: 'Poppins', sans-serif;
+}
+
 
 h1,
 h2,
