@@ -1,8 +1,10 @@
 "use client";
+import { useTranslation } from "react-i18next";
 import ProductCard from "./productCard";
 import SectionTitle from "./sectionTitle";
 
 export default function ProductsList() {
+  const {t, i18n} = useTranslation()
   const products = [
     {
       id: 1,
@@ -84,9 +86,9 @@ export default function ProductsList() {
   ];
   return (
     <div className="h-full w-full product-bg">
-      <section className="container mx-auto py-5 px-5 md:px-0">
-        <SectionTitle title="Aboody Products" />
-        <div className="grid grid-cols-2 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 py-5">
+      <section className="container mx-auto md:mx-auto py-5 px-5 md:px-2">
+        <SectionTitle title={t("aboody products")} />
+        <div className="grid grid-cols-2 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 md:gap-2 lg:gap-4 py-5">
           {products.map((product, index) => (
             <ProductCard product={product} key={index} />
           ))}

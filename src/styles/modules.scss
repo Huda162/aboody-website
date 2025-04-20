@@ -113,13 +113,11 @@
 .product-name {
     font-weight: 400;
     color: $white;
-    font-size: 4rem;
     font-family: 'vexa';
 }
 .product-name-en {
     font-weight: 400;
     color: $white;
-    font-size: 4rem;
     font-family: "Leckerli One", cursive;
 }
 
@@ -184,14 +182,46 @@
 }
 
 .custom-prev-arrow {
-    left: 25rem !important;
-    right: auto;
+    left: 5rem !important;
+    right: auto !important;
 }
 
+
 .custom-next-arrow {
-    left: auto;
-    right: 25rem !important;
+    left: auto !important;
+    right: 5rem !important;
 }
+
+@media (max-width: 768px) {
+    .custom-prev-arrow {
+      left: 1rem !important;
+    }
+  
+    .custom-next-arrow {
+      right: 1rem !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .custom-prev-arrow {
+      left: 5rem !important;
+    }
+  
+    .custom-next-arrow {
+      right: 5rem !important;
+    }
+  }
+  
+  /* Large screens (≥1024px) */
+  @media (min-width: 1440) {
+    .custom-prev-arrow {
+      left: 25rem !important;
+    }
+  
+    .custom-next-arrow {
+      right: 25rem !important;
+    }
+  }
 
 .custom-prev-arrow::after {
     font-family: "remixicon";
@@ -321,4 +351,29 @@
     color: white;
     font-size: 20px;
   }
+  
+  .product-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .drop {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+      pointer-events: none;
+      z-index: 2;
+    }
+  
+    &:hover .drop {
+      opacity: 1;
+      top: 35%;
+      transform: translate(-50%, -70%) scale(1); // Move up slightly and grow
+    }
+  }
+  
   

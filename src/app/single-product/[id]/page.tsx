@@ -3,13 +3,13 @@ import ProductDetails from "@/components/ProductDetails";
 import SectionTitle from "@/components/sectionTitle";
 import { useTranslation } from "react-i18next";
 
-interface Props {
-  params: {
-    id: string;
-  };
-}
+// interface Props {
+//   params: {
+//     id: string;
+//   };
+// }
 
-const SingleProduct = ({ params }: Props) => {
+const SingleProduct = () => {
   const {t, i18n} = useTranslation()
   const product =  {
     id: 1,

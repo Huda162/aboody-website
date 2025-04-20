@@ -15,9 +15,9 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="nav px-4 lg:px-6 py-2.5">
-        <div className="flex flex-wrap justify-between items-center mx-auto">
+        <div className="flex flex-nowrap lg:flex-wrap justify-between items-center mx-auto">
           {/* Logo + Language */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-between lg:justify-start w-full lg:w-fit">
             <button
               onClick={toggleMenu}
               type="button"
@@ -51,10 +51,15 @@ export default function Header() {
                 </svg>
               )}
             </button>
-            <img
+            {/* <img
               src="/assets/images/logo.png"
               className="mr-3 h-6 sm:h-16 hidden md:block"
               alt="Aboody Logo"
+            /> */}
+            <img
+              src="/assets/images/logo-mobile.png"
+              className="mr-3 h-6 sm:h-16 hidden md:block"
+              alt="Aboody Logo Mobile"
             />
           </div>
 
@@ -65,11 +70,11 @@ export default function Header() {
               className="mr-3 h-10 sm:h-16 block md:hidden"
               alt="Aboody Logo"
             />
-            <span className="hidden md:block flex items-center flex-row">
+            <span className="hidden lg:block flex items-center flex-row">
               <i className="ri-phone-fill"></i>
               0595555699
             </span>
-            <div className="language-menu relative hidden md:block">
+            <div className="language-menu relative hidden lg:block">
               <button type="button" className="simple-icon">
                 <i className="ri-global-line"></i>
               </button>

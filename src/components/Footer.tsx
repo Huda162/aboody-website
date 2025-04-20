@@ -7,13 +7,13 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="w-full mx-auto max-w-screen-xl flex items-center justify-center p-4 md:flex md:flex-col md:items-center md:gap-4 md:justify-between lg:flex-row">
-                <span className="t hidden xl:block">
+                <span className="t hidden md:block">
                     <img src="/assets/images/perfect-logo.png" className="mr-3 h-9 sm:h-9" alt="logo" width="120" height="120" />
                 </span>
-                <div className="text-white capitalize text-sm xl:text-lg">
+                <div className="text-white capitalize text-sm md:text-lg">
                     © 2025  {t("all right reserved")}
                 </div>
-                <div className="flex gap-3 items-center justify-center hidden xl:block">
+                <div className="gap-3 items-center justify-center hidden md:flex">
                     <button
                         type="button"
                         data-twe-ripple-init

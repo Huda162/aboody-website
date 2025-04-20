@@ -87,7 +87,9 @@ export default function Products() {
         alt="spice chicken"
         width={150}
         height={150}
-        className={`absolute bottom-10 left-0 transition-opacity duration-300  ${
+        className={`${
+          i18n.language === "en" ? "right-0 scale-x-[-1]" : "left-0"
+        } absolute bottom-10 transition-opacity hidden md:block duration-300  ${
           showImage ? "opacity-100" : "opacity-0"
         }`}
       />
@@ -96,13 +98,16 @@ export default function Products() {
         alt="spice chicken"
         width={180}
         height={180}
-        className={`
-    absolute top-20 right-0 transition-opacity duration-300 ${
+        className={` ${
+          i18n.language === "en" ? "left-0 scale-x-[-1]" : "right-0 "
+        }
+    absolute top-20 hidden md:block transition-opacity duration-300 ${
       showImage ? "opacity-100" : "opacity-0"
     }`}
       />
       <Swiper
-        className="h-[70%] mt-4 "
+        dir='ltr'
+        className="h-[70%] mt-4"
         spaceBetween={30}
         effect="creative"
         creativeEffect={{
@@ -126,23 +131,24 @@ export default function Products() {
         fadeEffect={{ crossFade: true }}
         modules={[Pagination, Navigation, EffectCreative]}
       >
-        {products.map((product) => (
-          <SwiperSlide>
-            <article className="product-card1 flex flex-col items-center justify-center gap-5">
+        {products.map((product, index) => (
+          <SwiperSlide  className="z-[1]"  key={index}>
+            <article className="product-card1 flex flex-col items-center justify-center gap-5 ">
               <Image
                 src={product.image}
                 width={400}
                 height={200}
                 alt="product"
+                className="w-[200px] md:w-[400px]"
               />
             </article>
           </SwiperSlide>
         ))}
       </Swiper>
       <h3
-        className={` text-center w-full absolute py-10 duration-300 ${
+        className={` text-center w-full absolute py-5 md:py-10 duration-300 text-4xl px-5 md:text-[3rem] lg:text-[4rem] ${
           showImage ? "opacity-100" : "opacity-0"
-        } ${i18n.language === 'ar' ? 'product-name' : 'product-name-en'}`}
+        } ${i18n.language === "ar" ? "product-name" : "product-name-en"}`}
       >
         {products[activeProduct].name}
       </h3>
