@@ -7,9 +7,11 @@ export default function Page() {
   return (
     <div>
       <Intro />
-      <About />
-      <Products />
-      <Contact />
+      <div className="product-bg pb-10 rounded-none">
+        <About />
+        <Products />
+        <Contact />
+      </div>
     </div>
-  )
+  );
 }

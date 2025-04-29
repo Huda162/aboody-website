@@ -94,7 +94,7 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <a href="#" className="nav-link">
+                <a href="/about" className="nav-link">
                   {t("about")}
                 </a>
               </li>
@@ -104,7 +104,7 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <a href="#" className="nav-link">
+                <a href="/contact" className="nav-link">
                   {t("contact")}
                 </a>
               </li>
@@ -115,7 +115,7 @@ export default function Header() {
 
       {/* Mobile Drawer (shown only on small screens) */}
       <div
-        className={`fixed top-0 start-0 h-full w-64 bg-[#808080] text-white z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
+        className={`fixed top-0 start-0 h-full w-64 bg-[#ffffff] text-gray-500 z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
           isOpen
             ? "translate-x-0"
             : `${
@@ -163,7 +163,7 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#" onClick={toggleMenu} className="nav-link">
+            <a href="/about" onClick={toggleMenu} className="nav-link">
               {t("about")}
             </a>
           </li>
@@ -173,7 +173,7 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#" onClick={toggleMenu} className="nav-link">
+            <a href="/contact" onClick={toggleMenu} className="nav-link">
               {t("contact")}
             </a>
           </li>

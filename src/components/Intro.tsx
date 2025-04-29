@@ -60,7 +60,7 @@ export default function Intro() {
             alt="cover"
             width={250}
             height={250}
-            className={`absolute z-20 top-2 md:top-3 left-[47%] transform -translate-x-1/2 w-[165px] md:w-[250px] ${
+            className={`absolute z-20 top-2 md:top-3 left-[47%] transform -translate-x-1/2 w-[165px] md:w-[250px] xl:w-[280px] ${
               animation ? "animate-show-cover" : ""
             }`}
           />
@@ -70,7 +70,7 @@ export default function Intro() {
           alt="spice box"
           width={300}
           height={300}
-          className="relative z-10 w-[200px] md:w-[300px]"
+          className="relative z-10 w-[200px] md:w-[300px] xl:w-[350px]"
         />
       </div>
     </section>

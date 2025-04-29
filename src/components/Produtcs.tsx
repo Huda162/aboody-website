@@ -65,10 +65,10 @@ export default function Products() {
 
   const [activeProduct, setActiveProduct] = useState<number>(0);
   return (
-    <section className="h-screen relative">
+    <section className="h-screen relative mx-auto container my-10 ">
       <button className="swiper-button-prev custom-prev-arrow"></button>
       <button className="swiper-button-next custom-next-arrow"></button>
-      <div className="h-full w-full absolute overflow-hidden">
+      <div className="h-full w-full absolute overflow-hidden rounded rounded-2xl">
         <img
           src={products[prevProduct].bg}
           className="absolute h-full w-full object-cover"
@@ -105,8 +105,9 @@ export default function Products() {
       showImage ? "opacity-100" : "opacity-0"
     }`}
       />
+      
       <Swiper
-        dir='ltr'
+        dir="ltr"
         className="h-[70%] mt-4"
         spaceBetween={30}
         effect="creative"
@@ -132,7 +133,7 @@ export default function Products() {
         modules={[Pagination, Navigation, EffectCreative]}
       >
         {products.map((product, index) => (
-          <SwiperSlide  className="z-[1]"  key={index}>
+          <SwiperSlide className="z-[1]" key={index}>
             <article className="product-card1 flex flex-col items-center justify-center gap-5 ">
               <Image
                 src={product.image}

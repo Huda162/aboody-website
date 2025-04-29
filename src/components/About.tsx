@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 export default function About() {
     const {t, i18n} = useTranslation()
     return (
-        <section className="container mx-auto mb-10 mt-10">
+        <section className="container mx-auto mb-10 ">
             <div className="about rounded-2xl px-8 flex flex-col md:flex-row items-center justify-center gap-20">
                 <div className="absolute inset-0 bg-[url('/assets/images/pattern.png')] bg-cover bg-bottom opacity-60 rounded-2xl"></div>
 
