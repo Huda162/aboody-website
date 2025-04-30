@@ -11,57 +11,64 @@ export default function ProductUse() {
       image: "/assets/images/step1.png",
       description_ar:
         "نأتي بأجنحة دجاج متوسطة الحجم (45-35) غم مقطعة قطعتين وبعد ذلك يتم غسلها بقليل من الليمون والملح فقط.",
-      description_en: "",
+      description_en:
+        "We take medium-sized chicken wings (35–45g), cut in two pieces, and wash them with a little lemon and salt only.",
     },
     {
       image: "/assets/images/step2.png",
       description_ar:
         "في وعاء كبير نخلط بهار الدجاج الخاص من عبودي بنسبة 45 غرام لكل كيلو من الدجاج،",
-      description_en: "",
+      description_en:
+        "In a large bowl, we mix Aboudi's special chicken seasoning at a ratio of 45 grams per kilogram of chicken.",
     },
     {
       image: "/assets/images/step3.png",
       description_ar:
         "ويوضع الدجاج في وعاء محكم الإغلاق و يوضع في الثلاجة لمدة لا تقل عن 6 ساعات.",
-      description_en: "",
+      description_en:
+        "The chicken is placed in an airtight container and refrigerated for no less than 6 hours.",
     },
     {
       image: "/assets/images/step4.png",
       description_ar: "توضع الأجنحة المبهرة في الزبدة وتقلب",
-      description_en: "",
+      description_en: "The seasoned wings are placed in butter and stirred.",
     },
     {
       image: "/assets/images/step5.png",
       description_ar:
         "ويوضع الطحين الأبيض في وعاء آخر دون أي إضافات اخرى للطحين.",
-      description_en: "",
+      description_en:
+        "White flour is placed in a separate bowl without adding anything else to it.",
     },
     {
       image: "/assets/images/step6.png",
       description_ar:
         "توضع زبدة الدجاج في وعاء ويضافٍ لها الماء بنسبة (50غم زبدة لكل 120مل من الماء) وتحرك جيداً، ",
-      description_en: "",
+      description_en:
+        "Chicken butter is placed in a bowl and water is added at a ratio of 50g butter to 120ml water, then mixed well.",
     },
     {
       image: "/assets/images/step7.png",
       description_ar:
         "ومن ثم نضعها في الطحين, بعدها يتم هز الأجنحة قليلا ليتساقط الطحين الزائد عن الأجنحة",
-      description_en: "",
+      description_en:
+        "Then we place the wings in the flour, and shake them slightly to remove the excess flour.",
     },
     {
       image: "/assets/images/step8.png",
       description_ar:
         "يغمر المقلى بالزيت ويوضع على درجة حرارة 165 مئوية ويتم إلقاء أجنحة الدجاج قطعة قطعة",
-      description_en: "",
+      description_en:
+        "The frying pan is filled with oil and heated to 165°C, then the chicken wings are dropped in one by one.",
     },
   ];
-
+  
   const columns = 3;
 
   return (
-    <div className="w-full py-5 mx-auto">
+    <div className="w-full py-5 mx-auto flex items-center justify-center flex-col">
       <SectionTitle title={t("how to use the product")} />
-      <div className="w-full relative">
+      <div className="w-[85%] relative">
         {Array.from({ length: Math.ceil(steps.length / columns) }).map(
           (_, rowIndex) => {
             const start = rowIndex * columns;
@@ -134,13 +141,13 @@ export default function ProductUse() {
                         height={5000}
                         className="p-2 w-[90%] mx-auto"
                       />
-                      <p className="text-sm py-2">
-                        {step.description_ar} {actualIndex + 1}
+                      <p className="text-lg h-[20%] py-2">
+                        {i18n.language === 'ar' ? step.description_ar : step.description_en}
                       </p>
 
                       {arrow && (
                         <div
-                          className={`${isEndOfRow ? "top-2/2" : "top-[40%]"} ${
+                          className={`${isEndOfRow ? "top-2/2" : "top-[30%]"} ${
                             i18n.language === 'en' ? !isLTR ? "left-[-60px]" : "right-[-60px]" :  !isLTR ? "right-[-60px]" : "left-[-60px]"
                           } text-2xl absolute  transform -translate-y-1/2`}
                         >
@@ -149,7 +156,7 @@ export default function ProductUse() {
                             alt={`Arrow from step ${actualIndex + 1}`}
                             width={5000}
                             height={5000}
-                            className="p-2 w-[90%] mx-auto"
+                            className="p-2 w-[50%] md:w-[70%] lg:w-[100%] mx-auto"
                           />
                         </div>
                       )}
