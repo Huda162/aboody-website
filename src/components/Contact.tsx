@@ -1,4 +1,5 @@
 "use client";
+import useFetchData from "hooks/general/useFetchData";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
@@ -12,7 +13,7 @@ export default function Contact() {
       >
         <form
           action=""
-          className="space-y-7 p-[7rem] md:p-[2rem] lg:p-[4rem] xl:p-[7rem] "
+          className="space-y-7 p-[4rem] md:p-[2rem] lg:p-[4rem] xl:p-[7rem] "
         >
           <h2 className="text-center text-white md:w-[15rem] lg:w-[15rem] xl:w-[27rem] w-fit text-3xl font-semibold pb-7">
             {t("contact us")}

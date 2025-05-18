@@ -19,6 +19,12 @@
     background: url('/assets/images/intro-bg.png') no-repeat center center;
     background-size: cover;
 }
+.contact-background {
+    background: url('/assets/images/contact-bg2.png');
+    background-repeat: no-repeat;         /* repeat vertically */
+    background-position: center center;     /* start from the top */
+    background-size: cover; 
+}
 
 .product-bg {
     background-image: url('/assets/images/products-bg.png');

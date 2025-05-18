@@ -62,13 +62,13 @@ export default function ProductUse() {
         "The frying pan is filled with oil and heated to 165°C, then the chicken wings are dropped in one by one.",
     },
   ];
-  
+
   const columns = 3;
 
   return (
     <div className="w-full py-5 mx-auto flex items-center justify-center flex-col">
       <SectionTitle title={t("how to use the product")} />
-      <div className="w-[85%] relative">
+      <div className="w-[85%] relative hidden md:block">
         {Array.from({ length: Math.ceil(steps.length / columns) }).map(
           (_, rowIndex) => {
             const start = rowIndex * columns;
@@ -141,14 +141,22 @@ export default function ProductUse() {
                         height={5000}
                         className="p-2 w-[90%] mx-auto"
                       />
-                      <p className="text-lg h-[20%] py-2">
-                        {i18n.language === 'ar' ? step.description_ar : step.description_en}
+                      <p className="text-md lg:text-lg h-[20%] py-2">
+                        {i18n.language === "ar"
+                          ? step.description_ar
+                          : step.description_en}
                       </p>
 
                       {arrow && (
                         <div
                           className={`${isEndOfRow ? "top-2/2" : "top-[30%]"} ${
-                            i18n.language === 'en' ? !isLTR ? "left-[-60px]" : "right-[-60px]" :  !isLTR ? "right-[-60px]" : "left-[-60px]"
+                            i18n.language === "en"
+                              ? !isLTR
+                                ? "left-[-60px]"
+                                : "right-[-60px]"
+                              : !isLTR
+                              ? "right-[-60px]"
+                              : "left-[-60px]"
                           } text-2xl absolute  transform -translate-y-1/2`}
                         >
                           <Image
@@ -167,6 +175,30 @@ export default function ProductUse() {
             );
           }
         )}
+      </div>
+      <div className="w-full relative block md:hidden bg-[#f2f2f2] grid grid-cols-2 gap-2 my-2">
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-start text-center flex-col relative"
+          >
+            <div className="absolute border rounded-full w-[25px] h-[25px] border-[#EE303C] top-10 start-10 flex items-center justify-center bg-white text-[#EE303C]">
+              {index + 1}
+            </div>
+            <Image
+              src={step.image}
+              alt={`Step ${index + 1}`}
+              width={5000}
+              height={5000}
+              className="p-2 w-[100%] mx-auto"
+            />
+            <p className="text-sm h-[20%] py-2">
+              {i18n.language === "ar"
+                ? step.description_ar
+                : step.description_en}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );

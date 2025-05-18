@@ -18,7 +18,10 @@ interface productCardProps {
 export default function ProductCard({ product }: productCardProps) {
   const { t, i18n } = useTranslation();
   return (
-    <div className="w-full group bg-white xl:bg-white pb-[5px] shadow-sm shadow-slate-300 rounded-md min-h-[250px] md:min-h-[330px] relative product-card">
+    <Link
+      href={`/single-product/${product.id}`}
+      className="w-full group bg-white xl:bg-white pb-[5px] shadow-sm shadow-slate-300 rounded-md min-h-[250px] md:min-h-[330px] relative product-card"
+    >
       <div className="product-image-wrapper">
         <Image
           src={product?.image}
@@ -49,12 +52,12 @@ export default function ProductCard({ product }: productCardProps) {
             {product.weight}
             {t("g")}
           </p>
-          <Link
-            href={`/single-product/${product.id}`}
+          <div
+            // href={`/single-product/${product.id}`}
             className="bg-gray-500 py-1 px-2 text-white rounded-md text-sm cursor-pointer hover:bg-[#EE303C] transition-all duration-500 w-full md-w-fit text-center"
           >
             {t("details")}
-          </Link>
+          </div>
         </div>
       </div>
       <div className="flex items-center justify-center text-gray-300 p-2 hidden xl:flex md:flex">
@@ -65,6 +68,6 @@ export default function ProductCard({ product }: productCardProps) {
           ...
         </p>
       </div>
-    </div>
+    </Link>
   );
 }

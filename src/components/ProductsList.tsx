@@ -2,9 +2,11 @@
 import { useTranslation } from "react-i18next";
 import ProductCard from "./productCard";
 import SectionTitle from "./sectionTitle";
+import useFetchData from "hooks/general/useFetchData";
 
 export default function ProductsList() {
   const {t, i18n} = useTranslation()
+  const { data, loading } = useFetchData("products");
   const products = [
     {
       id: 1,

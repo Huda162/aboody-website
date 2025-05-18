@@ -16,9 +16,9 @@ interface ImageProps {
 export default function ProductDetails({ product }: ImageProps) {
   const { t, i18n } = useTranslation();
   return (
-    <div className="flex gap-3 flex-col md:flex-row bg-[#EE303C] p-5 lg:p-10 rounded rounded-lg">
+    <div className="flex flex-col md:flex-row p-5 lg:p-10 ">
       <ProductImage img={product.image} />
-      <div className="flex flex-col gap-5 items-start justify-start m-4 p-3 text-lg">
+      <div className="flex flex-col gap-10 items-start bg-[#EE303C] justify-start m-0 md:m-5 p-5  lg:p-10 text-lg rounded rounded-lg">
         <p className="text-white text-[22px]  xl:border xl:border-[#82c440] py-1 px-2 font-semibold rounded-lg bg-[#82c440]">
           {i18n.language === "ar" ? product.name_ar : product.name_en}
         </p>

@@ -18,8 +18,8 @@ interface ImageProps {
 export default function ProductImage({ img }: ImageProps) {
   const [selectedImage, setSelectedImage] = useState(img[0]);
   return (
-    <div className=" w-[90%] md:w-[300px] h-[400px] m-4 flex items-center justify-between flex-col gap-1 bg-white p-3 rounded">
-      <div className="rounded rounded-md  w-[280px] h-[280px] flex items-center justify-center ">
+    <div className=" w-[100%] md:w-[350px] h-[400px] md:h-[440px] py-5 flex items-center justify-between flex-col gap-1 bg-white rounded">
+      <div className="rounded rounded-md  w-[280px] h-[280px] md:h-[320px] md:w-[320px] flex items-center justify-center ">
         <Image
           src={selectedImage}
           alt="spice chicken"
@@ -28,9 +28,9 @@ export default function ProductImage({ img }: ImageProps) {
           className="w-full rounded rounded-md"
         />
       </div>
-      <div className="relative w-full">
+      <div className="relative w-[320px]">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={4}
           spaceBetween={3}
           freeMode={true}
           dir="ltr"

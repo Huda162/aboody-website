@@ -1,11 +1,9 @@
-import ProductsIntro from "@/components/ProductsIntro";
-import ProductsList from "@/components/ProductsList";
+import ContactPage from "@/components/contactPage";
+
 
 const Contact = () => {
     return (
-      <div>
-contact us
-      </div>
+      <ContactPage/>
     );
   };
   
