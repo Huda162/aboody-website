@@ -56,20 +56,24 @@ export default function Header() {
               className="mr-3 h-6 sm:h-16 hidden md:block"
               alt="Aboody Logo"
             /> */}
-            <img
-              src="/assets/images/logo-mobile.png"
-              className="mr-3 h-6 sm:h-16 hidden md:block"
-              alt="Aboody Logo Mobile"
-            />
+            <a href="/" className="">
+              <img
+                src="/assets/images/logo-mobile.png"
+                className="mr-3 h-6 sm:h-16 hidden md:block"
+                alt="Aboody Logo Mobile"
+              />
+            </a>
           </div>
 
           {/* Right side: Phone + Mobile Toggle */}
           <div className="flex items-center lg:order-2 gap-5 md:text-">
-            <img
-              src="/assets/images/logo.png"
-              className="mr-3 h-10 sm:h-16 block md:hidden"
-              alt="Aboody Logo"
-            />
+            <a href="/" className="nav-link">
+              <img
+                src="/assets/images/logo.png"
+                className="mr-3 h-10 sm:h-16 block md:hidden"
+                alt="Aboody Logo"
+              />
+            </a>
             <span className="hidden lg:block flex items-center flex-row">
               <i className="ri-phone-fill"></i>
               0595555699
@@ -119,9 +123,7 @@ export default function Header() {
           isOpen
             ? "translate-x-0"
             : `${
-                i18n.language === "ar"
-                  ? "translate-x-200"
-                  : "-translate-x-full"
+                i18n.language === "ar" ? "translate-x-200" : "-translate-x-full"
               }`
         }`}
         id="mobile-menu-drawer"
@@ -173,7 +175,7 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="/contact" onClick={toggleMenu} className="nav-link">
+            <a href="/contact   " onClick={toggleMenu} className="nav-link">
               {t("contact")}
             </a>
           </li>
