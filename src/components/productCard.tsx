@@ -9,7 +9,7 @@ interface productCardProps {
     name_ar: string;
     name_en: string;
     weight: string;
-    image: string;
+    images: {url:string}[];
     description_ar: string;
     description_en: string;
   };
@@ -24,7 +24,7 @@ export default function ProductCard({ product }: productCardProps) {
     >
       <div className="product-image-wrapper">
         <Image
-          src={product?.image}
+          src={product?.images?.[0]?.url}
           alt="spice chicken"
           width={150}
           height={150}

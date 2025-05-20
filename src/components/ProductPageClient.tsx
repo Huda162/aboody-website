@@ -37,7 +37,7 @@ export default function SingleProductPage ({ id }: Props ) {
     // <div className="h-full w-full product-bg">
     <div className="container min-h-[90vh] mx-auto pt-[3%] px-4">
       {/* <SectionTitle title={t("product details")} /> */}
-      <ProductDetails product={product} />
+      <ProductDetails product={data?.product} />
       <ProductUse />
       <SectionTitle title={t("you might also like")} />
       <ProductRecommendation />

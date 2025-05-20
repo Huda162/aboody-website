@@ -91,7 +91,7 @@ export default function ProductsList() {
       <section className="container mx-auto md:mx-auto py-5 px-5 md:px-2">
         <SectionTitle title={t("aboody products")} />
         <div className="grid grid-cols-2 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 md:gap-2 lg:gap-4 py-5">
-          {products.map((product, index) => (
+          {data?.data?.map((product:any, index:number) => (
             <ProductCard product={product} key={index} />
           ))}
         </div>

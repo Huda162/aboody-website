@@ -13,10 +13,10 @@ import "swiper/css/navigation";
 import { useState } from "react";
 
 interface ImageProps {
-  img: string[];
+  img: {url:string}[];
 }
 export default function ProductImage({ img }: ImageProps) {
-  const [selectedImage, setSelectedImage] = useState(img[0]);
+  const [selectedImage, setSelectedImage] = useState(img?.[0]?.url);
   return (
     <div className=" w-[100%] md:w-[350px] h-[400px] md:h-[440px] py-5 flex items-center justify-between flex-col gap-1 bg-white rounded">
       <div className="rounded rounded-md  w-[280px] h-[280px] md:h-[320px] md:w-[320px] flex items-center justify-center ">
@@ -40,10 +40,10 @@ export default function ProductImage({ img }: ImageProps) {
           modules={[FreeMode, Pagination]}
           className="w-full h-[100px]"
         >
-          {img.map((image) => (
-            <SwiperSlide onClick={()=>{setSelectedImage(image)}}>
+          {img?.map((image) => (
+            <SwiperSlide onClick={()=>{setSelectedImage(image?.url)}}>
               <Image
-                src={image}
+                src={image.url}
                 alt="spice chicken"
                 width={300}
                 height={300}
