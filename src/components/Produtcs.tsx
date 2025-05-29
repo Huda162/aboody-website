@@ -14,6 +14,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 interface ProductsProps {
   products: {
     id: number;
@@ -167,6 +168,12 @@ export default function Products({ products }: ProductsProps) {
           ? products?.[activeProduct]?.name_ar
           : products?.[activeProduct]?.name_en}
       </h3>
+      {/* <a
+        href="/products"
+        className="bg-primary text-white px-6 py-3 rounded-md shadow-md hover:bg-primary-dark transition-all duration-300"
+      >
+        {t("see all products")}
+      </a> */}
     </section>
   );
 }

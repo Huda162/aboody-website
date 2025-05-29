@@ -40,7 +40,7 @@ export default function ContactPage() {
           {t("send")}
         </button>
         <div className="grid grid-cols-2 gap-x-10 text-white">
-          <div className="flex gap-1 text-sm items-center justify-start mb-4">
+          <div className="flex gap-1 text-md items-center justify-start mb-4">
             <div className="p-1 rounded-full bg-white text-black flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ export default function ContactPage() {
             </div>
             info@aboody.ps
           </div>
-          <div className="flex gap-1 text-sm items-center justify-start mb-4">
+          <div className="flex gap-1 text-md items-center justify-start mb-4">
             <div className="p-1 rounded-full bg-white text-black flex items-center justify-center">
               <span className="[&>svg]:h-5 [&>svg]:w-5 ">
                 <svg
@@ -71,9 +71,14 @@ export default function ContactPage() {
                 </svg>
               </span>
             </div>
-            +972592199923{" "}
+            <div
+              dir="ltr"
+              className="flex gap-1 text-md items-center justify-start"
+            >
+              +972592199923{" "}
+            </div>
           </div>
-          <div className="flex gap-1 text-sm items-center justify-start mb-4">
+          <div className="flex gap-1 text-md items-center justify-start mb-4">
             <div className="p-1 rounded-full bg-white text-black flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +97,7 @@ export default function ContactPage() {
             </div>
             www.aboody.ps
           </div>
-          <div className="flex gap-1 text-sm items-center justify-start mb-4">
+          <div className="flex gap-1 text-md items-center justify-start mb-4">
             <div className="p-1 rounded-full bg-white text-black flex items-center justify-center">
               <span className="[&>svg]:h-5 [&>svg]:w-5">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">

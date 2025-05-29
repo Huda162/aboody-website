@@ -45,7 +45,7 @@ export default function Intro() {
         className="absolute bottom-20 right-0 z-10 hidden md:block md:w-[130px] lg:w-[150px]"
       />
       <Image
-        src="/assets/images/image-4.png"
+        src="/assets/images/Image-4.png"
         alt="chicken"
         width={700}
         height={700}
