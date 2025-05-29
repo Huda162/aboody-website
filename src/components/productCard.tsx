@@ -9,7 +9,7 @@ interface productCardProps {
     name_ar: string;
     name_en: string;
     weight: string;
-    images: {url:string}[];
+    images: { url: string }[];
     description_ar: string;
     description_en: string;
   };
@@ -19,7 +19,13 @@ export default function ProductCard({ product }: productCardProps) {
   const { t, i18n } = useTranslation();
   return (
     <Link
-      href={`/single-product/${product.id}`}
+      href={{
+        pathname: `/single-product`,
+        query: {
+          id: product?.id,
+        },
+      }}
+      // href={`/single-product/${product.id}`}
       className="w-full group bg-white xl:bg-white pb-[5px] shadow-sm shadow-slate-300 rounded-md min-h-[250px] md:min-h-[330px] relative product-card"
     >
       <div className="product-image-wrapper">

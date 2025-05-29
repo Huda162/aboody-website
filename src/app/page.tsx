@@ -13,7 +13,7 @@ export default function Page() {
       <Intro />
       <div className="product-bg pb-10 rounded-none">
         <About about={data?.about_us} />
-        <Products />
+        <Products products={data?.sliders}/>
         <Contact />
       </div>
     </div>

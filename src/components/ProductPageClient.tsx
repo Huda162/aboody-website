@@ -7,7 +7,7 @@ import useFetchData from "hooks/general/useFetchData";
 import { useTranslation } from "react-i18next";
 
 interface Props  {
-    id: string;
+    id: string | string[] | undefined;
 }
 
 

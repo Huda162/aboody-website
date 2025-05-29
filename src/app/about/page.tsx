@@ -9,7 +9,7 @@ const AboutUs = () => {
   const { data, loading } = useFetchData("about");
   console.log(data)
   return (
-    <div>
+    <div className="bg-[#f5f5f5] ">
       <AboutSection
         title={t("aboody")}
         body={{ body_ar: data?.about?.[0]?.body_ar, body_en: data?.about?.[0]?.body_en }}
