@@ -59,7 +59,10 @@ export default function ContactPage() {
             </div>
             info@aboody.ps
           </div>
-          <div className="flex gap-1 text-md items-center justify-start mb-4">
+          <a
+            href={`https://api.whatsapp.com/send?phone=972592199923`}
+            className="flex gap-1 text-md items-center justify-start mb-4"
+          >
             <div className="p-1 rounded-full bg-white text-black flex items-center justify-center">
               <span className="[&>svg]:h-5 [&>svg]:w-5 ">
                 <svg
@@ -77,7 +80,7 @@ export default function ContactPage() {
             >
               +972592199923{" "}
             </div>
-          </div>
+          </a>
           <div className="flex gap-1 text-md items-center justify-start mb-4">
             <div className="p-1 rounded-full bg-white text-black flex items-center justify-center">
               <svg
